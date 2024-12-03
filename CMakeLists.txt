@@ -50,14 +50,14 @@ install(
   DIRECTORY hardware/include/
   DESTINATION include/diffdrive_arduino
 )
+
 install(
-  DIRECTORY description/launch description/ros2_control description/urdf description/rviz
-  DESTINATION share/diffdrive_arduino
+  DIRECTORY
+    urdf
+  DESTINATION
+    share/${PROJECT_NAME}
 )
-install(
-  DIRECTORY bringup/launch bringup/config
-  DESTINATION share/diffdrive_arduino
-)
+
 install(TARGETS diffdrive_arduino
   EXPORT export_diffdrive_arduino
   ARCHIVE DESTINATION lib
